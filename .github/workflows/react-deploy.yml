@@ -51,7 +51,7 @@ jobs:
       # --delete : dist 폴더에 없는 파일은 제거(S3에만 있는 파일을 제거)
       - name: Deploy to S3
         run: 
-          aws s3 sync dist s3://${{ secrets.S3_BUCKET_NAME }} -delete
+          aws s3 sync dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
 
 
       # 7. CloudFront 캐시 무효화
