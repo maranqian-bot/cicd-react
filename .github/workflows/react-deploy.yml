@@ -5,7 +5,7 @@ name: React Deploy to s3 (OIDC)
 on : 
   push: 
   #masetr 브랜치에 push가 발생하면 실행하겠다
-  branches: ["master"] 
+    branches: ["master"] 
 
   #GitHub Actions가 AWS OIDC인증을 위해 필요한 권한 설정
   permissions:
@@ -13,7 +13,7 @@ on :
     contents: read # 저장소 코드 일기 권한
 
     #실행 단위 설정
-    jobs:
+  jobs:
     deploy:
     #실행 환경(GitHub에서 제공하는 리너)
     runs-on: ubuntu-latest
@@ -52,7 +52,7 @@ on :
       - name: Deploy to S3
         run: 
           aws s3 sync dist s3://${{ secrets.S3_BUCKET_NAME }} -delete
-          
+
 
       # 7. CloudFront 캐시 무효화
       - name: Invalidate CloudFront Cache
