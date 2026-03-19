@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './pages/Home.jsx'
 import Register from "./pages/Register.jsx";
-import Login from "./pages/login.jsx";
+import Login from "./pages/Login.jsx";
 import NoticeList from "./pages/NoticeList.jsx";
 import NoticeDetail from "./pages/NoticeDetail.jsx";
 import NoticeWrite from "./pages/NoticeWrite.jsx";
